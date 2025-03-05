@@ -11,7 +11,6 @@ interface TaskCardProps {
 export const TaskCard = ({ task, onStatusChange }: TaskCardProps) => {
   const getTimeInProgress = () => {
     if (!task.startedAt) return 'Не начата';
-    const endTime = task.completedAt || new Date();
     return formatDistanceToNow(task.startedAt, { locale: ru, addSuffix: false });
   };
 
