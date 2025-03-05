@@ -8,7 +8,7 @@ export async function GET() {
     });
     return NextResponse.json(tasks);
   } catch (error) {
-    return NextResponse.json({ error: 'Failed to fetch tasks' }, { status: 500 });
+    return NextResponse.json({ error: 'Failed to fetch tasks', error2: error }, { status: 500 });
   }
 }
 
